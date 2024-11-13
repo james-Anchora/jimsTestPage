@@ -71,6 +71,11 @@
                 interaction: {
                     linkText: "",
                     componentName: ""
+                },
+                user: {
+                    username: "",
+                    email: "",
+                    mobile: ""
                 }
             };
 
@@ -82,6 +87,7 @@
             email = document.getElementById('email').value;
             phoneNumber = document.getElementById('phone').value;
             console.log('Stored Values:', { username, email, phoneNumber });
+
         }
 
         function toggleAccordion(event) {
@@ -108,9 +114,9 @@
 
 <!-- Input fields for username, email, and phone number -->
 <div>
-    <input type="text" id="username" placeholder="Username" onblur="storeValues()">
-    <input type="email" id="email" placeholder="Email" onblur="storeValues()">
-    <input type="tel" id="phone" placeholder="Phone Number" onblur="storeValues()">
+    <input type="text" id="username" placeholder="Username" onblur="storeValues(), digitalData.user.username = this.innerText">
+    <input type="email" id="email" placeholder="Email" onblur="storeValues(), digitalData.user.email = this.innerText">
+    <input type="tel" id="phone" placeholder="Phone Number" onblur="storeValues(), digitalData.user.mobile = this.innerText">
 </div>
 <br>
 <br>
