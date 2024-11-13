@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page for Google Analytics</title>
+    <title>Tester Jims Analytics Playground</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,8 +84,11 @@
 
         function storeValues() {
             username = document.getElementById('username').value;
+            digitalData.user.username = username;
             email = document.getElementById('email').value;
+            digitalData.user.email = email;
             phoneNumber = document.getElementById('phone').value;
+            digitalData.user.mobile = phoneNumber;
             console.log('Stored Values:', { username, email, phoneNumber });
 
         }
@@ -114,9 +117,9 @@
 
 <!-- Input fields for username, email, and phone number -->
 <div>
-    <input type="text" id="username" placeholder="Username" onblur="storeValues(), digitalData.user.username = this.innerText">
-    <input type="email" id="email" placeholder="Email" onblur="storeValues(), digitalData.user.email = this.innerText">
-    <input type="tel" id="phone" placeholder="Phone Number" onblur="storeValues(), digitalData.user.mobile = this.innerText">
+    <input type="text" id="username" placeholder="Username" onblur="storeValues()">
+    <input type="email" id="email" placeholder="Email" onblur="storeValues()">
+    <input type="tel" id="phone" placeholder="Phone Number" onblur="storeValues()">
 </div>
 <br>
 <br>
